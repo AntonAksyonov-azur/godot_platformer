@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://jcn3rninhowj"]
+
+[ext_resource type="PackedScene" uid="uid://bivb1mc2ecwlw" path="res://Scenes/LevelBlocks/Block.tscn" id="1_exwnq"]
+[ext_resource type="PackedScene" uid="uid://pbmoqjvodepq" path="res://Scenes/Player/Player.tscn" id="1_iualk"]
+
+[node name="Playground" type="Node2D" unique_id=921446012]
+
+[node name="Floor" parent="." unique_id=1384781316 instance=ExtResource("1_exwnq")]
+position = Vector2(575.99994, 632)
+scale = Vector2(35.999996, 1)
+
+[node name="Floor2" parent="." unique_id=1715746040 instance=ExtResource("1_exwnq")]
+position = Vector2(436.00003, 618)
+rotation = 0.3577925
+scale = Vector2(11.799562, 4.5274644)
+
+[node name="Floor3" parent="." unique_id=779918519 instance=ExtResource("1_exwnq")]
+position = Vector2(95, 555)
+scale = Vector2(11.840514, 4.435902)
+
+[node name="Ceil" parent="." unique_id=932199842 instance=ExtResource("1_exwnq")]
+position = Vector2(576, 16)
+scale = Vector2(35.999996, 1)
+
+[node name="Wall" parent="." unique_id=1773656350 instance=ExtResource("1_exwnq")]
+position = Vector2(16, 324.09125)
+rotation = 1.5707964
+scale = Vector2(18.244295, 1)
+
+[node name="Wall2" parent="." unique_id=2013358679 instance=ExtResource("1_exwnq")]
+position = Vector2(1135.9999, 324.00003)
+rotation = 1.5707964
+scale = Vector2(18.244295, 1)
+
+[node name="Wall3" parent="." unique_id=697480006 instance=ExtResource("1_exwnq")]
+position = Vector2(1135.9999, 324.00003)
+rotation = 1.5707964
+scale = Vector2(18.244295, 1)
+
+[node name="Wall4" parent="." unique_id=263100745 instance=ExtResource("1_exwnq")]
+position = Vector2(927.9957, 580.0145)
+rotation = 1.5707964
+scale = Vector2(2.266119, 1.999733)
+
+[node name="Player" parent="." unique_id=240989378 instance=ExtResource("1_iualk")]
+position = Vector2(576, 216)
+_jumpSpeed = -600.0

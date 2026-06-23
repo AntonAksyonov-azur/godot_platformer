@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://bivb1mc2ecwlw"]
+
+[sub_resource type="Gradient" id="Gradient_xtv6o"]
+colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_a4k3g"]
+gradient = SubResource("Gradient_xtv6o")
+width = 32
+height = 32
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b1lj4"]
+size = Vector2(32, 32)
+
+[node name="Floor" type="Sprite2D" unique_id=1384781316]
+texture = SubResource("GradientTexture2D_a4k3g")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=805281500]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=2021976784]
+shape = SubResource("RectangleShape2D_b1lj4")
