@@ -1,6 +1,9 @@
 [gd_scene format=3 uid="uid://pbmoqjvodepq"]
 
-[ext_resource type="Script" uid="uid://cwutmvudceblq" path="res://Scenes/Player/Scripts/Player.cs" id="1_s0eop"]
+[ext_resource type="Script" uid="uid://cwutmvudceblq" path="res://Scripts/Entities/Player/PlayerCharacter.cs" id="1_ft8w5"]
+[ext_resource type="Script" uid="uid://c2pkxgm6cs50c" path="res://Scripts/Entities/Player/States/PlayerStateMovement.cs" id="2_ft8w5"]
+[ext_resource type="Script" uid="uid://c5tlo5y715ew1" path="res://Scripts/Entities/Player/States/PlayerStateIdle.cs" id="2_h54ih"]
+[ext_resource type="Resource" uid="uid://q7df7kkn232s" path="res://Settings/PlayerInputSettings.tres" id="2_ude3g"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_13qdw"]
 size = Vector2(18, 48)
@@ -8,8 +11,10 @@ size = Vector2(18, 48)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xrivr"]
 size = Vector2(18, 48)
 
-[node name="Player" type="CharacterBody2D" unique_id=240989378]
-script = ExtResource("1_s0eop")
+[node name="Player" type="CharacterBody2D" unique_id=240989378 node_paths=PackedStringArray("_states")]
+script = ExtResource("1_ft8w5")
+_playerInputSettings = ExtResource("2_ude3g")
+_states = [NodePath("State/StateIdle"), NodePath("State/StateMovement")]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=168561800]
 position = Vector2(0, -24)
@@ -18,3 +23,13 @@ texture = SubResource("PlaceholderTexture2D_13qdw")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=228731046]
 position = Vector2(0, -24)
 shape = SubResource("RectangleShape2D_xrivr")
+
+[node name="State" type="Node" parent="." unique_id=36043890]
+
+[node name="StateIdle" type="Node" parent="State" unique_id=918218270]
+script = ExtResource("2_h54ih")
+
+[node name="StateMovement" type="Node" parent="State" unique_id=348368113]
+script = ExtResource("2_ft8w5")
+_floorSnapLength = 10.0
+_stateId = 1

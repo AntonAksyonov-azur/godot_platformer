@@ -44,4 +44,4 @@ scale = Vector2(2.266119, 1.999733)
 
 [node name="Player" parent="." unique_id=240989378 instance=ExtResource("1_iualk")]
 position = Vector2(576, 216)
-_jumpSpeed = -600.0
+_jumpSpeed = -420.0

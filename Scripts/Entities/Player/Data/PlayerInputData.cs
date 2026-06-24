@@ -1,4 +1,4 @@
-﻿namespace Platformer.Scenes.Player.Scripts.Data;
+﻿namespace Platformer.Scripts.Entities.Player.Data;
 
 public struct PlayerInputData
 {

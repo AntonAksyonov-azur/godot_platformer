@@ -1,0 +1,6 @@
+[gd_resource type="Resource" format=3 uid="uid://q7df7kkn232s"]
+
+[ext_resource type="Script" uid="uid://bwtyggrusbrwu" path="res://Scripts/Entities/Player/Resources/PlayerInputSettings.cs" id="1_iasql"]
+
+[resource]
+script = ExtResource("1_iasql")
